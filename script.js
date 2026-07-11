@@ -9,8 +9,6 @@ function cambiarBanner() {
     bannerActual = (bannerActual + 1) % slidesBanner.length;
     slidesBanner[bannerActual].classList.add('activo');
 }
-
-// Cambia el banner del inicio automáticamente cada 4 segundos
 setInterval(cambiarBanner, 4000);
 
 
@@ -25,24 +23,38 @@ function cambiarGaleria() {
     galeriaActual = (galeriaActual + 1) % slidesGaleria.length;
     slidesGaleria[galeriaActual].classList.add('activo');
 }
-
-// Cambia la foto de la galería automáticamente cada 3.5 segundos
 setInterval(cambiarGaleria, 3500);
 
 
 // ==========================================
-// 3. LOGICA NUEVA: VENTANAS EMERGENTES (MODALES)
+// 3. CONTROL DE MODALES (ESTILO SEGURO)
 // ==========================================
 
-// Función para abrir la ventana con la información correspondiente
+// Abre el modal aplicando los estilos directamente con JS
 function abrirModal(idModal) {
-    document.getElementById(idModal).classList.add('mostrar');
+    let modal = document.getElementById(idModal);
+    modal.style.setProperty('display', 'flex', 'important');
+    // Pequeño delay para que la transición de opacidad se vea fluida
+    setTimeout(() => { 
+        modal.style.opacity = '1'; 
+        modal.querySelector('.modal-content').style.transform = 'translateY(0)';
+    }, 10);
 }
 
-// Función para cerrar la ventana al hacer clic en el fondo gris oscuro
+// Cierra el modal si se hace clic afuera (en el fondo gris)
 function cerrarModal(event, idModal) {
-    // Si el clic fue en el fondo y no dentro de la caja blanca de texto, se cierra
-    if (event.target === document.getElementById(idModal)) {
-        document.getElementById(idModal).classList.remove('mostrar');
+    let modal = document.getElementById(idModal);
+    if (event.target === modal) {
+        forzarCierre(idModal);
     }
+}
+
+// Función centralizada para desvanecer y ocultar el elemento por completo
+function forzarCierre(idModal) {
+    let modal = document.getElementById(idModal);
+    modal.style.opacity = '0';
+    modal.querySelector('.modal-content').style.transform = 'translateY(-20px)';
+    setTimeout(() => { 
+        modal.style.setProperty('display', 'none', 'important'); 
+    }, 300);
 }
