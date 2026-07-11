@@ -6,317 +6,151 @@
     <title>M&M Consultoría Ambiental</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<script>
-
-let slides = document.querySelectorAll(".slide");
-let actual = 0;
-
-function cambiarSlide() {
-
-    slides[actual].classList.remove("activo");
-
-    actual++;
-
-    if (actual >= slides.length) {
-        actual = 0;
-    }
-
-    slides[actual].classList.add("activo");
-}
-
-setInterval(cambiarSlide, 3000);
-
-</script>
 <body>
 
 <header>
+    <nav>
+        <div class="logo">
+            <h2>M&M</h2>
+        </div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#empresa">Empresa</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
-<nav>
+    <section id="inicio">
+        <!-- Slider de Banner principal -->
+        <div class="slider">
+            <div class="slide-banner activo">
+                <img src="imagenes/banner1.jpg" alt="Banner 1">
+            </div>
+            <div class="slide-banner">
+                <img src="imagenes/banner2.jpg" alt="Banner 2">
+            </div>
+            <div class="slide-banner">
+                <img src="imagenes/banner3.jpg" alt="Banner 3">
+            </div>
+        </div>
 
-<div class="logo">
-<h2>M&M</h2>
-</div>
-
-<ul>
-
-<li><a href="#inicio">Inicio</a></li>
-
-<li><a href="#empresa">Empresa</a></li>
-
-<li><a href="#servicios">Servicios</a></li>
-
-<li><a href="#contacto">Contacto</a></li>
-
-</ul>
-
-</nav>
-
-<section id="inicio">
-
-<div class="slider">
-
-<div class="slide activo">
-<img src="imagenes/banner1.jpg">
-</div>
-
-<div class="slide">
-<img src="imagenes/banner2.jpg">
-</div>
-
-<div class="slide">
-<img src="imagenes/banner3.jpg">
-</div>
-
-</div>
-
-<div class="texto-principal">
-
-<h1>M&M Consultoría Ambiental</h1>
-
-<p>
-Comprometidos con el Medio Ambiente
-</p>
-
-<a href="#contacto" class="boton">
-Solicitar Asesoramiento
-</a>
-
-</div>
-
-</section>
-
+        <div class="texto-principal">
+            <h1>M&M Consultoría Ambiental</h1>
+            <p>Comprometidos con el Medio Ambiente</p>
+            <a href="#contacto" class="boton">Solicitar Asesoramiento</a>
+        </div>
+    </section>
 </header>
 
 <section id="empresa">
-
-<div class="contenedor">
-
-<h2>Quiénes Somos</h2>
-
-<p>
-
-M&M Consultoría Ambiental brinda soluciones integrales
-en Medio Ambiente e Higiene y Seguridad para industrias,
-empresas y organismos públicos.
-
-</p>
-
-<p>
-
-Trabajamos con metodologías basadas en normas
-internacionales y adaptadas a la legislación argentina.
-
-</p>
-
-</div>
-
+    <div class="contenedor">
+        <h2>Quiénes Somos</h2>
+        <p>M&M Consultoría Ambiental brinda soluciones integrales en Medio Ambiente e Higiene y Seguridad para industrias, empresas y organismos públicos.</p>
+        <p>Trabajamos con metodologías basadas en normas internacionales y adaptadas a la legislación argentina.</p>
+    </div>
 </section>
 
 <section class="mision">
-
-<div class="contenedor">
-
-<h2>Misión</h2>
-
-<p>
-
-Brindar asistencia técnica especializada para la gestión
-ambiental, realizando monitoreos, estudios de impacto,
-evaluaciones ambientales y asesoramiento permanente.
-
-</p>
-
-</div>
-
+    <div class="contenedor">
+        <h2>Misión</h2>
+        <p>Brindar asistencia técnica especializada para la gestión ambiental, realizando monitoreos, estudios de impacto, evaluaciones ambientales y asesoramiento permanente.</p>
+    </div>
 </section>
 
 <section id="servicios">
-
-<h2>Nuestros Servicios</h2>
-
-<div class="cards">
-
-<div class="card">
-<i class="fa-solid fa-wind"></i>
-<h3>Atmósfera</h3>
-<p>Calidad del aire, emisiones y monitoreos.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-droplet"></i>
-<h3>Aguas</h3>
-<p>Potabilidad, efluentes y aguas industriales.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-volume-high"></i>
-<h3>Ruido</h3>
-<p>Mapas de ruido y mediciones.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-seedling"></i>
-<h3>Suelos</h3>
-<p>Monitoreo y caracterización.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-industry"></i>
-<h3>Ambiente Laboral</h3>
-<p>Evaluaciones ambientales ocupacionales.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-recycle"></i>
-<h3>Residuos</h3>
-<p>Caracterización y gestión integral.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-file-circle-check"></i>
-<h3>Consultoría</h3>
-<p>Estudios de Impacto Ambiental.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-clipboard-check"></i>
-<h3>Auditorías</h3>
-<p>Cumplimiento normativo ambiental.</p>
-</div>
-
-</div>
-
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+        <div class="card"><i class="fa-solid fa-wind"></i><h3>Atmósfera</h3><p>Calidad del aire, emisiones y monitoreos.</p></div>
+        <div class="card"><i class="fa-solid fa-droplet"></i><h3>Aguas</h3><p>Potabilidad, efluentes y aguas industriales.</p></div>
+        <div class="card"><i class="fa-solid fa-volume-high"></i><h3>Ruido</h3><p>Mapas de ruido y mediciones.</p></div>
+        <div class="card"><i class="fa-solid fa-seedling"></i><h3>Suelos</h3><p>Monitoreo y caracterización.</p></div>
+        <div class="card"><i class="fa-solid fa-industry"></i><h3>Ambiente Laboral</h3><p>Evaluaciones ambientales ocupacionales.</p></div>
+        <div class="card"><i class="fa-solid fa-recycle"></i><h3>Residuos</h3><p>Caracterización y gestión integral.</p></div>
+        <div class="card"><i class="fa-solid fa-file-circle-check"></i><h3>Consultoría</h3><p>Estudios de Impacto Ambiental.</p></div>
+        <div class="card"><i class="fa-solid fa-clipboard-check"></i><h3>Auditorías</h3><p>Cumplimiento normativo ambiental.</p></div>
+    </div>
 </section>
 
 <section class="numeros">
-
-<div>
-
-<h2>20+</h2>
-
-<p>Años de experiencia</p>
-
-</div>
-
-<div>
-
-<h2>500+</h2>
-
-<p>Proyectos realizados</p>
-
-</div>
-
-<div>
-
-<h2>100%</h2>
-
-<p>Compromiso</p>
-
-</div>
-
+    <div><h2>20+</h2><p>Años de experiencia</p></div>
+    <div><h2>500+</h2><p>Proyectos realizados</p></div>
+    <div><h2>100%</h2><p>Compromiso</p></div>
 </section>
+
 <section id="galeria" class="galeria">
     <h2>Galería Ambiental</h2>
-
+    <!-- Carrusel de Galería -->
     <div class="carrusel">
-        <img src="imagenes/ambiente1.jpg" class="slide activo">
-        <img src="imagenes/ambiente2.jpg" class="slide">
-        <img src="imagenes/ambiente3.jpg" class="slide">
-        <img src="imagenes/ambiente4.jpg" class="slide">
+        <img src="imagenes/ambiente1.jpg" class="slide-galeria activo" alt="Ambiente 1">
+        <img src="imagenes/ambiente2.jpg" class="slide-galeria" alt="Ambiente 2">
+        <img src="imagenes/ambiente3.jpg" class="slide-galeria" alt="Ambiente 3">
+        <img src="imagenes/ambiente4.jpg" class="slide-galeria" alt="Ambiente 4">
     </div>
 </section>
+
 <section id="contacto">
-
-<h2>Contacto</h2>
-
-<div class="contacto">
-
-<div class="info">
-
-<h3>Información Comercial</h3>
-
-<p><i class="fa-solid fa-location-dot"></i>
-Italia 67 - Piso 3 - San Nicolás de los Arroyos
-</p>
-
-<p><i class="fa-solid fa-phone"></i>
-+54 9 336 4103585
-</p>
-
-<p><i class="fa-solid fa-envelope"></i>
-mmasesoriaambiental@gmail.com
-</p>
-
-</div>
-
-<div class="formulario">
-
-<form action="https://formspree.io/f/TU_ID" method="POST">
-
-<input
-type="text"
-name="nombre"
-placeholder="Nombre"
-required>
-
-<input
-type="email"
-name="email"
-placeholder="Correo electrónico"
-required>
-
-<textarea
-name="consulta"
-rows="6"
-placeholder="Escriba su consulta">
-</textarea>
-
-<button>
-
-Enviar Consulta
-
-</button>
-
-</form>
-
-</div>
-
-</div>
-
+    <h2>Contacto</h2>
+    <div class="contacto">
+        <div class="info">
+            <h3>Información Comercial</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Italia 67 - Piso 3 - San Nicolás de los Arroyos</p>
+            <p><i class="fa-solid fa-phone"></i> +54 9 336 4103585</p>
+            <p><i class="fa-solid fa-envelope"></i> mmasesoriaambiental@gmail.com</p>
+        </div>
+        <div class="formulario">
+            <form action="https://formspree.io/f/TU_ID" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <textarea name="consulta" rows="6" placeholder="Escriba su consulta"></textarea>
+                <button>Enviar Consulta</button>
+            </form>
+        </div>
+    </div>
 </section>
 
 <section class="mapa">
-
-<iframe
-src="https://www.google.com/maps?q=Italia+67+San+Nicolas+de+los+Arroyos&output=embed"
-loading="lazy">
-</iframe>
-
+    <iframe src="https://www.google.com/maps?q=Italia+67+San+Nicolas+de+los+Arroyos&output=embed" loading="lazy"></iframe>
 </section>
 
-<a
-class="whatsapp"
-href="https://wa.me/5493364103585"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
+<a class="whatsapp" href="https://wa.me/5493364103585" target="_blank">
+    <i class="fab fa-whatsapp"></i>
 </a>
 
 <footer>
-
-<p>
-
-© 2025 M&M Consultoría Ambiental
-
-</p>
-
+    <p>© 2025 M&M Consultoría Ambiental</p>
 </footer>
 
+<!-- EL JAVASCRIPT SE PONE AQUÍ AL FINAL -->
+<script>
+    // 1. Lógica para el Banner Principal (Inicio)
+    let slidesBanner = document.querySelectorAll(".slide-banner");
+    let actualBanner = 0;
+
+    if(slidesBanner.length > 0) {
+        setInterval(function() {
+            slidesBanner[actualBanner].classList.remove("activo");
+            actualBanner = (actualBanner + 1) % slidesBanner.length;
+            slidesBanner[actualBanner].classList.add("activo");
+        }, 3000);
+    }
+
+    // 2. Lógica para la Galería Ambiental (Abajo)
+    let slidesGaleria = document.querySelectorAll(".slide-galeria");
+    let actualGaleria = 0;
+
+    if(slidesGaleria.length > 0) {
+        setInterval(function() {
+            slidesGaleria[actualGaleria].classList.remove("activo");
+            actualGaleria = (actualGaleria + 1) % slidesGaleria.length;
+            slidesGaleria[actualGaleria].classList.add("activo");
+        }, 3000);
+    }
+</script>
+
+<!-- Tu script externo si tenés código ahí -->
 <script src="script.js"></script>
 
 </body>
