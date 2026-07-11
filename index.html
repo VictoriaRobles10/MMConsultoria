@@ -24,22 +24,16 @@
     </nav>
 
     <section id="inicio">
-        <!-- Slider de Banner principal con sistema de rescate de imágenes -->
+        <!-- Slider de Banner principal -->
         <div class="slider">
             <div class="slide-banner activo">
-                <img src="Imagenes/banner1.jpg" 
-                     onerror="this.src='imagenes/banner1.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600';}" 
-                     alt="Banner 1">
+                <img src="Imagenes/banner1.jpg" onerror="this.src='imagenes/banner1.jpg';" alt="Banner 1">
             </div>
             <div class="slide-banner">
-                <img src="Imagenes/banner2.jpg" 
-                     onerror="this.src='imagenes/banner2.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600';}" 
-                     alt="Banner 2">
+                <img src="Imagenes/banner2.jpg" onerror="this.src='imagenes/banner2.jpg';" alt="Banner 2">
             </div>
             <div class="slide-banner">
-                <img src="Imagenes/banner3.jpg" 
-                     onerror="this.src='imagenes/banner3.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?w=1600';}" 
-                     alt="Banner 3">
+                <img src="Imagenes/banner3.jpg" onerror="this.src='imagenes/banner3.jpg';" alt="Banner 3">
             </div>
         </div>
 
@@ -70,101 +64,40 @@
     <h2>Nuestros Servicios</h2>
     <div class="cards">
         <!-- Tarjeta 1: Atmósfera -->
-        <div class="card" onclick="openModal('modal-atmosfera')">
+        <div class="card">
             <i class="fa-solid fa-wind"></i>
             <h3>Atmósfera</h3>
-            <p>Calidad del aire, emisiones y monitoreos.</p>
+            <p class="servicio-desc">Realizamos estudios analíticos de calidad de aire, muestreos de emisiones gaseosas industriales y mediciones de material particulado bajo normativas vigentes para mitigar el impacto ambiental.</p>
         </div>
         <!-- Tarjeta 2: Aguas -->
-        <div class="card" onclick="openModal('modal-aguas')">
+        <div class="card">
             <i class="fa-solid fa-droplet"></i>
             <h3>Aguas</h3>
-            <p>Potabilidad, efluentes y aguas industriales.</p>
+            <p class="servicio-desc">Análisis integral de aguas subterráneas y superficiales. Ensayos de potabilidad, control microbiológico y optimización de vuelco de efluentes líquidos industriales según parámetros legales.</p>
         </div>
         <!-- Tarjeta 3: Ruido -->
-        <div class="card" onclick="openModal('modal-ruido')">
+        <div class="card">
             <i class="fa-solid fa-volume-high"></i>
             <h3>Ruido</h3>
-            <p>Mapas de ruido y mediciones.</p>
+            <p class="servicio-desc">Elaboración de mapas de ruido ambiental y laboral, evaluaciones de contaminación acústica vecinal y diseño de barreras de mitigación sonora para establecimientos urbanos e industriales.</p>
         </div>
         <!-- Tarjeta 4: Suelos -->
-        <div class="card" onclick="openModal('modal-suelos')">
+        <div class="card">
             <i class="fa-solid fa-seedling"></i>
             <h3>Suelos</h3>
-            <p>Monitoreo y caracterización.</p>
+            <p class="servicio-desc">Muestreo sistemático y caracterización química de perfiles de suelo. Diagnóstico de terrenos contaminados, planes de remediación ambiental e ingeniería de conservación.</p>
         </div>
         <!-- Tarjeta 5: Ambiente Laboral -->
-        <div class="card" onclick="openModal('modal-laboral')">
+        <div class="card">
             <i class="fa-solid fa-industry"></i>
             <h3>Ambiente Laboral</h3>
-            <p>Evaluaciones ambientales ocupacionales.</p>
+            <p class="servicio-desc">Evaluaciones ambientales en puestos de trabajo: iluminación, carga térmica, ergonomía y agentes químicos suspendidos, garantizando la salud del personal y cumplimiento legal.</p>
         </div>
         <!-- Tarjeta 6: Residuos -->
-        <div class="card" onclick="openModal('modal-residuos')">
+        <div class="card">
             <i class="fa-solid fa-recycle"></i>
             <h3>Residuos</h3>
-            <p>Caracterización y gestión integral.</p>
-        </div>
-    </div>
-
-    <!-- VENTANAS EMERGENTES (MODALES) CON IMÁGENES Y DETALLES -->
-    <!-- Modal Atmósfera -->
-    <div id="modal-atmosfera" class="modal-overlay" onclick="closeModal(event, 'modal-atmosfera')">
-        <div class="modal-content">
-            <span class="modal-close" onclick="document.getElementById('modal-atmosfera').classList.remove('show')">&times;</span>
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=700" alt="Atmósfera">
-            <h3>Control y Monitoreo Atmosférico</h3>
-            <p>Realizamos estudios analíticos de calidad de aire, muestreos de emisiones gaseosas industriales y mediciones de material particulado bajo normativas vigentes para mitigar el impacto ambiental.</p>
-        </div>
-    </div>
-
-    <!-- Modal Aguas -->
-    <div id="modal-aguas" class="modal-overlay" onclick="closeModal(event, 'modal-aguas')">
-        <div class="modal-content">
-            <span class="modal-close" onclick="document.getElementById('modal-aguas').classList.remove('show')">&times;</span>
-            <img src="https://images.unsplash.com/photo-1548811579-017cf2a4268b?w=700" alt="Aguas">
-            <h3>Gestión de Recursos Hídricos</h3>
-            <p>Análisis integral de aguas subterráneas y superficiales. Ensayos de potabilidad, control microbiológico y optimización de vuelco de efluentes líquidos industriales según parámetros legales.</p>
-        </div>
-    </div>
-
-    <!-- Modal Ruido -->
-    <div id="modal-ruido" class="modal-overlay" onclick="closeModal(event, 'modal-ruido')">
-        <div class="modal-content">
-            <span class="modal-close" onclick="document.getElementById('modal-ruido').classList.remove('show')">&times;</span>
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=700" alt="Ruido">
-            <h3>Mediciones Acústicas e Impacto por Ruido</h3>
-            <p>Elaboración de mapas de ruido ambiental y laboral, evaluaciones de contaminación acústica vecinal y diseño de barreras de mitigación sonora para establecimientos urbanos e industriales.</p>
-        </div>
-    </div>
-
-    <!-- Modal Suelos -->
-    <div id="modal-suelos" class="modal-overlay" onclick="closeModal(event, 'modal-suelos')">
-        <div class="modal-content">
-            <span class="modal-close" onclick="document.getElementById('modal-suelos').classList.remove('show')">&times;</span>
-            <img src="https://images.unsplash.com/photo-1464241353294-5b74c591593c?w=700" alt="Suelos">
-            <h3>Estudio e Investigación de Suelos</h3>
-            <p>Muestreo sistemático y caracterización química de perfiles de suelo. Diagnóstico de terrenos contaminados, planes de remediación ambiental e ingeniería de conservación.</p>
-        </div>
-    </div>
-
-    <!-- Modal Ambiente Laboral -->
-    <div id="modal-laboral" class="modal-overlay" onclick="closeModal(event, 'modal-laboral')">
-        <div class="modal-content">
-            <span class="modal-close" onclick="document.getElementById('modal-laboral').classList.remove('show')">&times;</span>
-            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=700" alt="Ambiente Laboral">
-            <h3>Higiene y Seguridad Ocupacional</h3>
-            <p>Evaluaciones ambientales en puestos de trabajo: iluminación, carga térmica, ergonomía y agentes químicos suspendidos, garantizando la salud del personal y cumplimiento legal.</p>
-        </div>
-    </div>
-
-    <!-- Modal Residuos -->
-    <div id="modal-residuos" class="modal-overlay" onclick="closeModal(event, 'modal-residuos')">
-        <div class="modal-content">
-            <span class="modal-close" onclick="document.getElementById('modal-residuos').classList.remove('show')">&times;</span>
-            <img src="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?w=700" alt="Residuos">
-            <h3>Plan de Gestión Integral de Residuos</h3>
-            <p>Asesoramiento y categorización de residuos sólidos urbanos, industriales y peligrosos. Diseño de circuitos de reciclaje, almacenamiento seguro y planes de minimización de descarte.</p>
+            <p class="servicio-desc">Asesoramiento y categorización de residuos sólidos urbanos, industriales y peligrosos. Diseño de circuitos de reciclaje, almacenamiento seguro y planes de minimización de descarte.</p>
         </div>
     </div>
 </section>
@@ -177,16 +110,12 @@
 
 <section id="galeria" class="galeria">
     <h2>Galería Ambiental</h2>
-    <!-- Carrusel de Galería con sistema de rescate de imágenes -->
+    <!-- Carrusel de Galería -->
     <div class="carrusel">
-        <img src="Imagenes/ambiente1.jpg" class="slide-galeria activo" alt="Ambiente 1"
-             onerror="this.src='imagenes/ambiente1.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900';}">
-        <img src="Imagenes/ambiente2.jpg" class="slide-galeria" alt="Ambiente 2"
-             onerror="this.src='imagenes/ambiente2.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=900';}">
-        <img src="Imagenes/ambiente3.jpg" class="slide-galeria" alt="Ambiente 3"
-             onerror="this.src='imagenes/ambiente3.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=900';}">
-        <img src="Imagenes/ambiente4.jpg" class="slide-galeria" alt="Ambiente 4"
-             onerror="this.src='imagenes/ambiente4.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1472214222541-d510753a8707?w=900';}">
+        <img src="Imagenes/ambiente1.jpg" class="slide-galeria activo" alt="Ambiente 1" onerror="this.src='imagenes/ambiente1.jpg';">
+        <img src="Imagenes/ambiente2.jpg" class="slide-galeria" alt="Ambiente 2" onerror="this.src='imagenes/ambiente2.jpg';">
+        <img src="Imagenes/ambiente3.jpg" class="slide-galeria" alt="Ambiente 3" onerror="this.src='imagenes/ambiente3.jpg';">
+        <img src="Imagenes/ambiente4.jpg" class="slide-galeria" alt="Ambiente 4" onerror="this.src='imagenes/ambiente4.jpg';">
     </div>
 </section>
 
@@ -222,7 +151,6 @@
     <p>© 2025 M&M Consultoría Ambiental</p>
 </footer>
 
-<!-- LLAMADA ÚNICA AL SCRIPT EXTERNO -->
 <script src="script.js"></script>
 
 </body>
