@@ -15,7 +15,6 @@
         <!-- CONTENEDOR DEL LOGO (Configurado con L mayúscula) -->
         <div class="logo-container">
             <a href="#inicio">
-                <!-- Se cambió a Logo.png para que coincida exactamente con tu archivo -->
                 <img src="Imagenes/Logo.png" onerror="this.style.display='none'; document.getElementById('logo-texto').style.display='block';" alt="M&M Logo" class="logo-img">
                 <h2 id="logo-texto" style="display:none; color:white; margin:0;">M&M</h2>
             </a>
@@ -66,42 +65,149 @@
 <section class="mision">
     <div class="contenedor">
         <h2>Misión</h2>
-        <p>Brindar asistencia técnica especializada para la gestión ambiental, realizando monitoreos, estudios de impacto, evaluations ambientales y asesoramiento permanente.</p>
+        <p>Brindar asistencia técnica especializada para la gestión ambiental, realizando monitoreos, estudios de impacto, evaluaciones ambientales y asesoramiento permanente.</p>
     </div>
 </section>
 
+<!-- SECCIÓN DE SERVICIOS CON MODALES INTEGRADOS -->
 <section id="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="cards">
-        <div class="card">
+        <!-- Tarjeta 1: Atmósfera -->
+        <div class="card" onclick="abrirModal('modal-atmosfera')">
             <i class="fa-solid fa-wind"></i>
             <h3>Atmósfera</h3>
             <p class="servicio-desc">Realizamos estudios analíticos de calidad de aire, muestreos de emisiones gaseosas industriales y mediciones de material particulado bajo normativas vigentes para mitigar el impacto ambiental.</p>
+            <span class="ver-mas">Ver más detalles +</span>
         </div>
-        <div class="card">
+        <!-- Tarjeta 2: Aguas -->
+        <div class="card" onclick="abrirModal('modal-aguas')">
             <i class="fa-solid fa-droplet"></i>
             <h3>Aguas</h3>
             <p class="servicio-desc">Análisis integral de aguas subterráneas y superficiales. Ensayos de potabilidad, control microbiológico y optimización de vuelco de efluentes líquidos industriales según parámetros legales.</p>
+            <span class="ver-mas">Ver más detalles +</span>
         </div>
-        <div class="card">
+        <!-- Tarjeta 3: Ruido -->
+        <div class="card" onclick="abrirModal('modal-ruido')">
             <i class="fa-solid fa-volume-high"></i>
             <h3>Ruido</h3>
             <p class="servicio-desc">Elaboración de mapas de ruido ambiental y laboral, evaluaciones de contaminación acústica vecinal y diseño de barreras de mitigación sonora para establecimientos urbanos e industriales.</p>
+            <span class="ver-mas">Ver más detalles +</span>
         </div>
-        <div class="card">
+        <!-- Tarjeta 4: Suelos -->
+        <div class="card" onclick="abrirModal('modal-suelos')">
             <i class="fa-solid fa-seedling"></i>
             <h3>Suelos</h3>
             <p class="servicio-desc">Muestreo sistemático y caracterización química de perfiles de suelo. Diagnóstico de terrenos contaminados, planes de remediación ambiental e ingeniería de conservación.</p>
+            <span class="ver-mas">Ver más detalles +</span>
         </div>
-        <div class="card">
+        <!-- Tarjeta 5: Ambiente Laboral -->
+        <div class="card" onclick="abrirModal('modal-laboral')">
             <i class="fa-solid fa-industry"></i>
             <h3>Ambiente Laboral</h3>
             <p class="servicio-desc">Evaluaciones ambientales en puestos de trabajo: iluminación, carga térmica, ergonomía y agentes químicos suspendidos, garantizando la salud del personal y cumplimiento legal.</p>
+            <span class="ver-mas">Ver más detalles +</span>
         </div>
-        <div class="card">
+        <!-- Tarjeta 6: Residuos -->
+        <div class="card" onclick="abrirModal('modal-residuos')">
             <i class="fa-solid fa-recycle"></i>
             <h3>Residuos</h3>
             <p class="servicio-desc">Asesoramiento y categorización de residuos sólidos urbanos, industriales y peligrosos. Diseño de circuitos de reciclaje, almacenamiento seguro y planes de minimización de descarte.</p>
+            <span class="ver-mas">Ver más detalles +</span>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- VENTANAS EMERGENTES (MODALES DE INFORMACIÓN) -->
+    <!-- ========================================== -->
+    
+    <!-- Modal 1: Atmósfera -->
+    <div id="modal-atmosfera" class="modal-overlay" onclick="cerrarModal(event, 'modal-atmosfera')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="document.getElementById('modal-atmosfera').classList.remove('mostrar')">&times;</span>
+            <i class="fa-solid fa-wind modal-icon"></i>
+            <h3>Estudios Atmosféricos Detallados</h3>
+            <ul>
+                <li>Muestreo de conductos estacionarios (Chimeneas) bajo norma EPA.</li>
+                <li>Monitoreo de calidad de aire perimetral e inmobiliario.</li>
+                <li>Medición de partículas totales en suspensión (PTS) y fracción respirable (PM10/PM2.5).</li>
+                <li>Modelación de dispersión de contaminantes atmosféricos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal 2: Aguas -->
+    <div id="modal-aguas" class="modal-overlay" onclick="cerrarModal(event, 'modal-aguas')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="document.getElementById('modal-aguas').classList.remove('mostrar')">&times;</span>
+            <i class="fa-solid fa-droplet modal-icon"></i>
+            <h3>Gestión e Ingeniería de Aguas</h3>
+            <ul>
+                <li>Aforo y toma de muestras analíticas en pozos de monitoreo freático.</li>
+                <li>Caracterización físico-química y bacteriológica completa de agua potable.</li>
+                <li>Control y diseño de plantas de tratamiento de efluentes industriales líquidos.</li>
+                <li>Tramitación de permisos de vuelco y pre-tratamiento ante entes reguladores.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal 3: Ruido -->
+    <div id="modal-ruido" class="modal-overlay" onclick="cerrarModal(event, 'modal-ruido')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="document.getElementById('modal-ruido').classList.remove('mostrar')">&times;</span>
+            <i class="fa-solid fa-volume-high modal-icon"></i>
+            <h3>Acústica y Control de Ruido</h3>
+            <ul>
+                <li>Medición de ruido molesto al vecindario según norma IRAM 4062.</li>
+                <li>Mapas de ruido laboral integrados mediante dosimetrías y sonometrías.</li>
+                <li>Evaluación de impacto acústico ambiental para nuevas industrias o locales.</li>
+                <li>Diseño de cabinas de insonorización y soluciones de ingeniería acústica.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal 4: Suelos -->
+    <div id="modal-suelos" class="modal-overlay" onclick="cerrarModal(event, 'modal-suelos')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="document.getElementById('modal-suelos').classList.remove('mostrar')">&times;</span>
+            <i class="fa-solid fa-seedling modal-icon"></i>
+            <h3>Estudios e Ingeniería de Suelos</h3>
+            <ul>
+                <li>Muestreo mecánico y manual de suelos con testigo continuo.</li>
+                <li>Análisis de metales pesados, hidrocarburos (TPH) y agroquímicos.</li>
+                <li>Auditorías de fases (Fase I y II) para transferencia de predios industriales.</li>
+                <li>Diseño de planes de remediación de suelos contaminados (Biopilas, Landfarming).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal 5: Ambiente Laboral -->
+    <div id="modal-laboral" class="modal-overlay" onclick="cerrarModal(event, 'modal-laboral')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="document.getElementById('modal-laboral').classList.remove('mostrar')">&times;</span>
+            <i class="fa-solid fa-industry modal-icon"></i>
+            <h3>Higiene Ocupacional y Ambiente Laboral</h3>
+            <ul>
+                <li>Medición de iluminación según Resolución SRT 84/12.</li>
+                <li>Protocolos de carga térmica (Estrés por frío o calor).</li>
+                <li>Muestreos analíticos de contaminantes químicos en aire de zonas de trabajo.</li>
+                <li>Estudios de ergonomía integral en líneas de producción.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal 6: Residuos -->
+    <div id="modal-residuos" class="modal-overlay" onclick="cerrarModal(event, 'modal-residuos')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="document.getElementById('modal-residuos').classList.remove('mostrar')">&times;</span>
+            <i class="fa-solid fa-recycle modal-icon"></i>
+            <h3>Planes de Gestión de Residuos</h3>
+            <ul>
+                <li>Categorización e inscripción de generadores de residuos peligrosos/especiales.</li>
+                <li>Planes de gestión interna y minimización en origen (Economía Circular).</li>
+                <li>Diseño y habilitación de depósitos transitorios de residuos industriales.</li>
+                <li>Auditorías técnicas a transportistas y plantas de disposición final.</li>
+            </ul>
         </div>
     </div>
 </section>
@@ -126,7 +232,7 @@
     <h2>Contacto</h2>
     <div class="contacto">
         <div class="info">
-            <!-- SEGUNDO LOGO TAMBIÉN CON L MAYÚSCULA -->
+            <!-- SEGUNDO LOGO EN LA INFO DE CONTACTO (Con L mayúscula) -->
             <img src="Imagenes/Logo.png" onerror="this.style.display='none';" alt="M&M Logo Comercial" class="logo-contacto-img">
             <h3>Información Comercial</h3>
             <p><i class="fa-solid fa-location-dot"></i> Italia 67 - Piso 3 - San Nicolás de los Arroyos</p>
