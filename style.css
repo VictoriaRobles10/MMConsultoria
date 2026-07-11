@@ -22,14 +22,36 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 8%;
+    padding:10px 8%; /* Espaciado ideal para la altura del logo */
     z-index:999;
 }
 
-.logo{
-    color:#fff;
-    font-size:28px;
-    font-weight:bold;
+/* ========================================== */
+/*  ESTILOS PARA EL LOGO PROPIO               */
+/* ========================================== */
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 50px; /* Mantiene el logo alineado y prolijo en el menú */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05); /* Efecto sutil al pasar el mouse */
+}
+
+.logo-contacto-img {
+    height: 70px; /* Tamaño para el bloque de información abajo */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
+    display: block;
 }
 
 nav ul{
@@ -53,14 +75,15 @@ nav ul li a:hover{
 }
 
 /* ========================================== */
-/*  1. SLIDER DEL BANNER DE INICIO (CORREGIDO) */
+/*  1. BANNER DE INICIO (ANTI-PANTALLA NEGRA)  */
 /* ========================================== */
 #inicio {
     height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
-    background: #000; /* Fondo negro de respaldo */
+    /* Degradado azul de marca en caso de que la imagen tarde en cargar */
+    background: linear-gradient(135deg, #0B3558 0%, #164e7d 100%); 
 }
 
 .slider {
@@ -69,7 +92,7 @@ nav ul li a:hover{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Se posiciona al fondo */
+    z-index: 1;
 }
 
 .slide-banner {
@@ -89,7 +112,7 @@ nav ul li a:hover{
 .slide-banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Hace que cubra todo el espacio gris */
+    object-fit: cover;
     object-position: center;
 }
 
@@ -103,10 +126,10 @@ nav ul li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0,0,0,.5); /* Filtro oscuro para leer bien el texto */
+    background: rgba(0,0,0,.5);
     color: white;
     text-align: center;
-    z-index: 2; /* Se posiciona por encima de las fotos */
+    z-index: 2;
 }
 
 .texto-principal h1 {
@@ -157,23 +180,27 @@ h2{
     line-height:1.8;
 }
 
+/* ========================================== */
+/*  TARJETAS DE SERVICIOS                      */
+/* ========================================== */
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
 }
 
 .card{
     background:white;
-    padding:35px;
+    padding:40px 30px;
     border-radius:15px;
     text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.12);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
     transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .card i{
@@ -183,7 +210,16 @@ h2{
 }
 
 .card h3{
+    color:#0B3558;
+    font-size:22px;
     margin-bottom:15px;
+}
+
+.servicio-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
 }
 
 .numeros{
@@ -236,7 +272,7 @@ h2{
 }
 
 /* ========================================== */
-/*  CONTACTO, MAPA Y REQUISITOS FINALES       */
+/*  CONTACTO, FORMULARIO Y MAPA               */
 /* ========================================== */
 .contacto{
     display:grid;
@@ -304,16 +340,16 @@ footer{
 }
 
 /* ========================================== */
-/*  RESPONSIVE / DISEÑO ADAPTABLE             */
+/*  DISEÑO RESPONSIVO (MÓVILES Y TABLETS)     */
 /* ========================================== */
 @media(max-width:900px){
-
     nav{
         flex-direction:column;
+        gap:10px;
     }
 
     nav ul{
-        margin-top:15px;
+        margin-top:5px;
     }
 
     .texto-principal h1{
