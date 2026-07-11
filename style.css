@@ -75,7 +75,7 @@ nav ul li a:hover{
 }
 
 /* ========================================== */
-/*  1. BANNER DE INICIO (ANTI-PANTALLA NEGRA)  */
+/*  BANNER DE INICIO (ANTI-PANTALLA NEGRA)     */
 /* ========================================== */
 #inicio {
     height: 100vh;
@@ -181,7 +181,7 @@ h2{
 }
 
 /* ========================================== */
-/*  TARJETAS DE SERVICIOS                      */
+/*  TARJETAS DE SERVICIOS E INTERACTIVIDAD    */
 /* ========================================== */
 .cards{
     display:grid;
@@ -196,6 +196,8 @@ h2{
     text-align:center;
     box-shadow:0 5px 20px rgba(0,0,0,.08);
     transition:.4s;
+    cursor:pointer;
+    position:relative;
 }
 
 .card:hover{
@@ -222,6 +224,19 @@ h2{
     text-align: center;
 }
 
+.ver-mas {
+    display: inline-block;
+    margin-top: 15px;
+    color: #38b56b;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.card:hover .ver-mas {
+    color: #0B3558;
+}
+
 .numeros{
     background:#0B3558;
     color:white;
@@ -237,7 +252,99 @@ h2{
 }
 
 /* ========================================== */
-/*  2. CARRUSEL DE LA GALERÍA AMBIENTAL       */
+/*  VENTANAS EMERGENTES (MODALES)             */
+/* ========================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 550px;
+    width: 90%;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.mostrar .modal-content {
+    transform: translateY(0);
+}
+
+.modal-icon {
+    font-size: 45px;
+    color: #38b56b;
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: #0B3558;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content ul li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+    position: relative;
+    padding-left: 25px;
+}
+
+.modal-content ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #38b56b;
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* ========================================== */
+/*  CARRUSEL DE LA GALERÍA AMBIENTAL       */
 /* ========================================== */
 .galeria {
     text-align: center;
