@@ -1,218 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M&M Consultoría Ambiental</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&M Consultoría Ambiental</title>
 
-<style>
+    <link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-background:#f4f7f7;
-color:#333;
-}
-
-header{
-background:#0a6d4d;
-color:white;
-padding:70px 20px;
-text-align:center;
-}
-
-header h1{
-font-size:48px;
-}
-
-header p{
-font-size:22px;
-margin-top:15px;
-}
-
-nav{
-background:#064b35;
-padding:15px;
-text-align:center;
-position:sticky;
-top:0;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:20px;
-font-weight:bold;
-}
-
-section{
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:60px 0;
-}
-
-h2{
-color:#0a6d4d;
-margin-bottom:20px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-footer{
-background:#0a6d4d;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:50px;
-}
-
-button{
-background:#0a6d4d;
-color:white;
-padding:15px 30px;
-border:none;
-border-radius:8px;
-font-size:18px;
-cursor:pointer;
-margin-top:25px;
-}
-
-button:hover{
-background:#0d8b63;
-}
-
-</style>
-
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
 <header>
 
-<h1>M&M Consultoría Ambiental</h1>
-
-<p>Comprometidos con el Medio Ambiente</p>
-
-<button>Solicitar Asesoramiento</button>
-
-</header>
-
 <nav>
 
-<a href="#empresa">Empresa</a>
+<div class="logo">
+<h2>M&M</h2>
+</div>
 
-<a href="#servicios">Servicios</a>
+<ul>
 
-<a href="#consultoria">Consultoría</a>
+<li><a href="#inicio">Inicio</a></li>
 
-<a href="#contacto">Contacto</a>
+<li><a href="#empresa">Empresa</a></li>
+
+<li><a href="#servicios">Servicios</a></li>
+
+<li><a href="#contacto">Contacto</a></li>
+
+</ul>
 
 </nav>
 
+<section id="inicio">
+
+<div class="slider">
+
+<div class="slide activo">
+<img src="imagenes/banner1.jpg">
+</div>
+
+<div class="slide">
+<img src="imagenes/banner2.jpg">
+</div>
+
+<div class="slide">
+<img src="imagenes/banner3.jpg">
+</div>
+
+</div>
+
+<div class="texto-principal">
+
+<h1>M&M Consultoría Ambiental</h1>
+
+<p>
+Comprometidos con el Medio Ambiente
+</p>
+
+<a href="#contacto" class="boton">
+Solicitar Asesoramiento
+</a>
+
+</div>
+
+</section>
+
+</header>
+
 <section id="empresa">
+
+<div class="contenedor">
 
 <h2>Quiénes Somos</h2>
 
 <p>
 
-Somos una consultora especializada en Medio Ambiente e Higiene y Seguridad,
-brindando soluciones integrales para empresas e industrias.
+M&M Consultoría Ambiental brinda soluciones integrales
+en Medio Ambiente e Higiene y Seguridad para industrias,
+empresas y organismos públicos.
 
 </p>
+
+<p>
+
+Trabajamos con metodologías basadas en normas
+internacionales y adaptadas a la legislación argentina.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="mision">
+
+<div class="contenedor">
+
+<h2>Misión</h2>
+
+<p>
+
+Brindar asistencia técnica especializada para la gestión
+ambiental, realizando monitoreos, estudios de impacto,
+evaluaciones ambientales y asesoramiento permanente.
+
+</p>
+
+</div>
 
 </section>
 
 <section id="servicios">
 
-<h2>Diagnóstico Ambiental</h2>
+<h2>Nuestros Servicios</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>🌎 Atmósfera</h3>
-<p>Emisiones, calidad de aire, partículas y gases.</p>
+<i class="fa-solid fa-wind"></i>
+<h3>Atmósfera</h3>
+<p>Calidad del aire, emisiones y monitoreos.</p>
 </div>
 
 <div class="card">
-<h3>💧 Aguas</h3>
-<p>Análisis de agua potable, industrial y efluentes.</p>
+<i class="fa-solid fa-droplet"></i>
+<h3>Aguas</h3>
+<p>Potabilidad, efluentes y aguas industriales.</p>
 </div>
 
 <div class="card">
-<h3>🔊 Ruido Ambiental</h3>
+<i class="fa-solid fa-volume-high"></i>
+<h3>Ruido</h3>
 <p>Mapas de ruido y mediciones.</p>
 </div>
 
 <div class="card">
-<h3>🌱 Suelos</h3>
-<p>Monitoreo y análisis ambiental.</p>
+<i class="fa-solid fa-seedling"></i>
+<h3>Suelos</h3>
+<p>Monitoreo y caracterización.</p>
 </div>
 
 <div class="card">
-<h3>🏭 Ambiente Laboral</h3>
-<p>Ruido, iluminación, carga térmica y contaminantes.</p>
+<i class="fa-solid fa-industry"></i>
+<h3>Ambiente Laboral</h3>
+<p>Evaluaciones ambientales ocupacionales.</p>
 </div>
 
 <div class="card">
-<h3>♻ Residuos</h3>
-<p>Caracterización y estudios.</p>
+<i class="fa-solid fa-recycle"></i>
+<h3>Residuos</h3>
+<p>Caracterización y gestión integral.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-file-circle-check"></i>
+<h3>Consultoría</h3>
+<p>Estudios de Impacto Ambiental.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-clipboard-check"></i>
+<h3>Auditorías</h3>
+<p>Cumplimiento normativo ambiental.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="consultoria">
+<section class="numeros">
 
-<h2>Consultoría Ambiental</h2>
+<div>
 
-<div class="cards">
+<h2>20+</h2>
 
-<div class="card">
-<h3>📄 Estudios de Impacto Ambiental</h3>
+<p>Años de experiencia</p>
+
 </div>
 
-<div class="card">
-<h3>📑 Declaraciones Juradas</h3>
+<div>
+
+<h2>500+</h2>
+
+<p>Proyectos realizados</p>
+
 </div>
 
-<div class="card">
-<h3>🏢 Habilitaciones</h3>
-</div>
+<div>
 
-<div class="card">
-<h3>⚖ Auditorías Ambientales</h3>
-</div>
+<h2>100%</h2>
 
-<div class="card">
-<h3>📈 Gestión Ambiental</h3>
-</div>
-
-<div class="card">
-<h3>👨‍💼 Asesoramiento Técnico</h3>
-</div>
+<p>Compromiso</p>
 
 </div>
 
@@ -222,20 +204,91 @@ brindando soluciones integrales para empresas e industrias.
 
 <h2>Contacto</h2>
 
-<p><b>Dirección:</b> Italia 67 – San Nicolás de los Arroyos</p>
+<div class="contacto">
 
-<p><b>Teléfono:</b> +54 9 336 4103585</p>
+<div class="info">
 
-<p><b>Email:</b> mmasesoriaambiental@gmail.com</p>
+<h3>Información Comercial</h3>
+
+<p><i class="fa-solid fa-location-dot"></i>
+Italia 67 - Piso 3 - San Nicolás de los Arroyos
+</p>
+
+<p><i class="fa-solid fa-phone"></i>
++54 9 336 4103585
+</p>
+
+<p><i class="fa-solid fa-envelope"></i>
+mmasesoriaambiental@gmail.com
+</p>
+
+</div>
+
+<div class="formulario">
+
+<form action="https://formspree.io/f/TU_ID" method="POST">
+
+<input
+type="text"
+name="nombre"
+placeholder="Nombre"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Correo electrónico"
+required>
+
+<textarea
+name="consulta"
+rows="6"
+placeholder="Escriba su consulta">
+</textarea>
+
+<button>
+
+Enviar Consulta
+
+</button>
+
+</form>
+
+</div>
+
+</div>
 
 </section>
 
+<section class="mapa">
+
+<iframe
+src="https://www.google.com/maps?q=Italia+67+San+Nicolas+de+los+Arroyos&output=embed"
+loading="lazy">
+</iframe>
+
+</section>
+
+<a
+class="whatsapp"
+href="https://wa.me/5493364103585"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
 <footer>
+
+<p>
 
 © 2025 M&M Consultoría Ambiental
 
+</p>
+
 </footer>
 
-</body>
+<script src="script.js"></script>
 
+</body>
 </html>
