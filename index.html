@@ -24,16 +24,16 @@
     </nav>
 
     <section id="inicio">
-        <!-- Slider de Banner principal -->
+        <!-- Slider de Banner principal (Rutas corregidas con 'Imagenes/') -->
         <div class="slider">
             <div class="slide-banner activo">
-                <img src="imagenes/banner1.jpg" alt="Banner 1">
+                <img src="Imagenes/banner1.jpg" alt="Banner 1">
             </div>
             <div class="slide-banner">
-                <img src="imagenes/banner2.jpg" alt="Banner 2">
+                <img src="Imagenes/banner2.jpg" alt="Banner 2">
             </div>
             <div class="slide-banner">
-                <img src="imagenes/banner3.jpg" alt="Banner 3">
+                <img src="Imagenes/banner3.jpg" alt="Banner 3">
             </div>
         </div>
 
@@ -82,12 +82,12 @@
 
 <section id="galeria" class="galeria">
     <h2>Galería Ambiental</h2>
-    <!-- Carrusel de Galería -->
+    <!-- Carrusel de Galería (Rutas corregidas con 'Imagenes/') -->
     <div class="carrusel">
-        <img src="imagenes/ambiente1.jpg" class="slide-galeria activo" alt="Ambiente 1">
-        <img src="imagenes/ambiente2.jpg" class="slide-galeria" alt="Ambiente 2">
-        <img src="imagenes/ambiente3.jpg" class="slide-galeria" alt="Ambiente 3">
-        <img src="imagenes/ambiente4.jpg" class="slide-galeria" alt="Ambiente 4">
+        <img src="Imagenes/ambiente1.jpg" class="slide-galeria activo" alt="Ambiente 1">
+        <img src="Imagenes/ambiente2.jpg" class="slide-galeria" alt="Ambiente 2">
+        <img src="Imagenes/ambiente3.jpg" class="slide-galeria" alt="Ambiente 3">
+        <img src="Imagenes/ambiente4.jpg" class="slide-galeria" alt="Ambiente 4">
     </div>
 </section>
 
@@ -123,34 +123,7 @@
     <p>© 2025 M&M Consultoría Ambiental</p>
 </footer>
 
-<!-- EL JAVASCRIPT SE PONE AQUÍ AL FINAL -->
-<script>
-    // 1. Lógica para el Banner Principal (Inicio)
-    let slidesBanner = document.querySelectorAll(".slide-banner");
-    let actualBanner = 0;
-
-    if(slidesBanner.length > 0) {
-        setInterval(function() {
-            slidesBanner[actualBanner].classList.remove("activo");
-            actualBanner = (actualBanner + 1) % slidesBanner.length;
-            slidesBanner[actualBanner].classList.add("activo");
-        }, 3000);
-    }
-
-    // 2. Lógica para la Galería Ambiental (Abajo)
-    let slidesGaleria = document.querySelectorAll(".slide-galeria");
-    let actualGaleria = 0;
-
-    if(slidesGaleria.length > 0) {
-        setInterval(function() {
-            slidesGaleria[actualGaleria].classList.remove("activo");
-            actualGaleria = (actualGaleria + 1) % slidesGaleria.length;
-            slidesGaleria[actualGaleria].classList.add("activo");
-        }, 3000);
-    }
-</script>
-
-<!-- Tu script externo si tenés código ahí -->
+<!-- LLAMADA ÚNICA AL SCRIPT EXTERNO (Aquí se maneja toda la lógica) -->
 <script src="script.js"></script>
 
 </body>
